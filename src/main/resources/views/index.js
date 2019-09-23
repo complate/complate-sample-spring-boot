@@ -8,10 +8,7 @@ views.forEach(view => {
 	renderer.registerView(view);
 });
 
-// Hack: only there to make sure faucet includes the runder function
-console.log(render);
-
-let render = function render(stream, tag, params) {
+export default function render(stream, tag, params) {
     renderer.renderView(tag, params, stream, true, null);
     stream.flush();
 }

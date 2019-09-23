@@ -9,6 +9,7 @@ module.exports = {
         target: "./target/classes/dist/views.js",
         jsx: { pragma: "createElement" },
         esnext: true,
-        format: "esm",
+        format: "iife",
+        exports: "render"
     }]
 };
