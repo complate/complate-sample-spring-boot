@@ -19,7 +19,7 @@ import java.util.Map;
 public class SpringdemoController {
 
     private NashornScriptingBridge engine = new NashornScriptingBridge();
-    private ClassPathResource bundle = new ClassPathResource("views/bundle.js");
+    private ClassPathResource bundle = new ClassPathResource("dist/views.js");
     private Map<String, String> model = Collections.singletonMap("title", "Hello World");
     private ComplateViewResolver resolver = new ComplateViewResolver(engine, bundle);
 

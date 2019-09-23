@@ -2,7 +2,7 @@
 
 module.exports = {
     js: [{
-        source: "./views/index.js",
+        source: "./src/main/resources/views/index.js",
         target: "./dist/views.js",
         format: "CommonJS",
         jsx: { pragma: "createElement" }

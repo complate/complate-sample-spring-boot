@@ -5,6 +5,8 @@
     "complate-stream": "^0.16.7"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "faucet-pipeline-esnext": "^2.0.8",
     "faucet-pipeline-js": "^2.0.8"
   }
 }
