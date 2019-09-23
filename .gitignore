@@ -18,3 +18,4 @@ target/
 *.iws
 *.iml
 *.ipr
+node_modules

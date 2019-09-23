@@ -1,0 +1,10 @@
+{
+  "name": "complate-sample-rails",
+  "private": true,
+  "dependencies": {
+    "complate-stream": "^0.16.7"
+  },
+  "devDependencies": {
+    "faucet-pipeline-js": "^2.0.8"
+  }
+}
