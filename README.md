@@ -13,7 +13,8 @@ $ npm install
 ./mvnw clean install
 # Collect dependencies
 ./mvnw dependency:copy-dependencies
-
+# Start server
+./mvnw spring-boot:run
 ```
 
 ## Walkthrough
