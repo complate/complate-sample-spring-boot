@@ -4,4 +4,16 @@ This sample repository demonstrates the server-side rendering of an [java spring
 
 ## Getting Started
 
+```
+# Install js dependencies
+$ npm install
+# Build JSX view
+./node_modules/.bin/faucet
+# Build java application
+./mvnw clean install
+# Collect dependencies
+./mvnw dependency:copy-dependencies
+
+```
+
 ## Walkthrough
