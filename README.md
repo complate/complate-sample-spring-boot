@@ -19,9 +19,9 @@ The project is based on the [Spring Initializr](https://start.spring.io/) templa
 The controller defines the resolver, the main component that generates complate views. It requires the bundled javascript file (see below) and a scripting engine.
 
 ```java
-    private ClassPathResource bundle = new ClassPathResource("/dist/views.js");
-    private NashornScriptingBridge engine = new NashornScriptingBridge();
-    private ComplateViewResolver resolver = new ComplateViewResolver(engine, bundle);
+private ClassPathResource bundle = new ClassPathResource("/dist/views.js");
+private NashornScriptingBridge engine = new NashornScriptingBridge();
+private ComplateViewResolver resolver = new ComplateViewResolver(engine, bundle);
 ```
 
 To be able to pass variables to the rendered view, we define the model.
@@ -33,16 +33,16 @@ private Map<String, String> model = new HashMap<>(2);
 The controller function itself populates the model, dispatches on the view using a view-tag, and renders the view.
 
 ```java
-    @GetMapping("/")
-    public void index(HttpServletRequest req, HttpServletResponse resp) throws Exception {
-        model.put("age", "99");
-        model.put("name", "John Doe");
-        String viewTag = "Person";
-        View view = resolver.resolveViewName(viewTag, Locale.US);
-        if (view != null) {
-            view.render(model, req, resp);
-        }
+@GetMapping("/")
+public void index(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+    model.put("age", "99");
+    model.put("name", "John Doe");
+    String viewTag = "Person";
+    View view = resolver.resolveViewName(viewTag, Locale.US);
+    if (view != null) {
+        view.render(model, req, resp);
     }
+}
 ```
 
 ### The bundled js file
