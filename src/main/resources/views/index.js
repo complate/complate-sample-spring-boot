@@ -1,4 +1,3 @@
-import "./env"; // NB: must be imported (i.e. initialized) before macros
 import views from "./manifest";
 import Renderer from "complate-stream";
 
