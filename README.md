@@ -7,10 +7,10 @@
 ## Getting Started
 
 ```shell script
-npm install                                # Install js dependencies
 ./mvnw clean install                       # Build java application
 ./mvnw dependency:copy-dependencies        # Collect dependencies
-./node_modules/.bin/faucet                 # Build JSX view
+npm install                                # Install js dependencies
+npm run compile                            # Build JSX view
 ./mvnw spring-boot:run                     # Start server
 ```
 

@@ -1,6 +1,9 @@
 {
   "name": "complate-sample-spring-mvc",
   "private": true,
+  "scripts": {
+    "compile": "faucet"
+  },
   "dependencies": {
     "complate-stream": "^0.16.7"
   },
