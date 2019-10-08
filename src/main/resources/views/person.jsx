@@ -1,6 +1,6 @@
 import { createElement } from "complate-stream";
 
-import ContentPanel from "./panel"
+import Panel from "./components/panel"
 
 export default function Person(model) {
     return <html>
@@ -15,7 +15,7 @@ export default function Person(model) {
             <h1>Person</h1>
             <p>Name: {model.name}</p>
             <p>Age: {model.age}</p>
-            <ContentPanel title="Bio">...some notes about this person...</ContentPanel>
+            <Panel title="Bio">...some notes about this person...</Panel>
         </body>
         </html>;
 }

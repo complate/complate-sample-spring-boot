@@ -1,3 +1,4 @@
-import Person from "./person"
+import Person from "./person";
+import BootstrapSample from "./bootstrap-sample";
 
-export default [Person];
+export default [Person, BootstrapSample];
