@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.github.complate</groupId>
     <artifactId>springdemo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>springdemo</name>
     <description>Demo project for the Spring MVC complate adapter</description>
 

@@ -16,9 +16,9 @@ import java.util.Map;
 @Controller
 public class SpringdemoController {
 
-    private NashornScriptingBridge engine = new NashornScriptingBridge();
+    private Map<String, String> model = new HashMap<>(2);
     private ClassPathResource bundle = new ClassPathResource("/dist/views.js");
-    private Map<String, String> model = new HashMap<>(77);
+    private NashornScriptingBridge engine = new NashornScriptingBridge();
     private ComplateViewResolver resolver = new ComplateViewResolver(engine, bundle);
 
     @GetMapping("/")
