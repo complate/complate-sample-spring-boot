@@ -7,12 +7,12 @@ This sample repository demonstrates the server-side rendering of an [java spring
 ```
 # Install js dependencies
 $ npm install
-# Build JSX view
-./node_modules/.bin/faucet
 # Build java application
 ./mvnw clean install
 # Collect dependencies
 ./mvnw dependency:copy-dependencies
+# Build JSX view
+./node_modules/.bin/faucet
 # Start server
 ./mvnw spring-boot:run
 ```
