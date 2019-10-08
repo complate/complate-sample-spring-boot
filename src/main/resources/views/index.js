@@ -1,9 +1,11 @@
-import views from "./manifest";
 import Renderer from "complate-stream";
+
+import Person from "./person";
+import BootstrapSample from "./bootstrap-sample";
 
 let renderer = new Renderer("<!DOCTYPE html>");
 
-views.forEach(view => {
+[Person, BootstrapSample].forEach(view => {
 	renderer.registerView(view);
 });
 

@@ -16,17 +16,28 @@ import java.util.Map;
 @Controller
 public class SpringdemoController {
 
-    private Map<String, String> model = new HashMap<>(2);
+    private Map<String, String> model;
     private ClassPathResource bundle = new ClassPathResource("/dist/views.js");
     private NashornScriptingBridge engine = new NashornScriptingBridge();
     private ComplateViewResolver resolver = new ComplateViewResolver(engine, bundle);
 
     @GetMapping("/")
     public void index(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+        model = new HashMap<>();
         model.put("age", "99");
         model.put("name", "John Doe");
-        String viewTag = "Person";
-        View view = resolver.resolveViewName(viewTag, Locale.US);
+        View view = resolver.resolveViewName("Person", Locale.US);
+        if (view != null) {
+            view.render(model, req, resp);
+        }
+    }
+
+    @GetMapping("/bootstrap")
+    public void bootstrap(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+        model = new HashMap<>();
+        model.put("text", "Lorem Ipsum");
+        model.put("title", "Bootstrap Sample");
+        View view = resolver.resolveViewName("BootstrapSample", Locale.US);
         if (view != null) {
             view.render(model, req, resp);
         }
