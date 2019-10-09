@@ -20,3 +20,7 @@ target/
 *.ipr
 node_modules
 package-lock.json
+
+GPATH
+GRTAGS
+GTAGS
