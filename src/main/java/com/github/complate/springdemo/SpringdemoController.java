@@ -27,6 +27,6 @@ public class SpringdemoController {
         model = new HashMap<>();
         model.put("text", "Lorem Ipsum");
         model.put("title", "Bootstrap Sample");
-        return new ModelAndView("BootstrapSamlpe", model);
+        return new ModelAndView("BootstrapSample", model);
     }
 }
