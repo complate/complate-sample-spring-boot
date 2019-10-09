@@ -41,13 +41,13 @@ This view resolver is imported from the [java spring-mvc complate
 adaptor](https://github.com/complate/complate-spring-mvc).
 
 ```java
-    @GetMapping("/")
-    public ModelAndView index() throws Exception {
-        model = new HashMap<>();
-        model.put("age", "99");
-        model.put("name", "John Doe");
-        return new ModelAndView("Person", model);
-    }
+@GetMapping("/")
+public ModelAndView index() throws Exception {
+    model = new HashMap<>();
+    model.put("age", "99");
+    model.put("name", "John Doe");
+    return new ModelAndView("Person", model);
+}
 ```
 
 This sample project specifies two mapping functions with their corresponding
