@@ -1,6 +1,6 @@
 "use strict";
 
-let templateDir = "./src/jsx";
+let templateDir = "./src/main/jsx";
 
 module.exports = {
     watchDirs: [templateDir],
