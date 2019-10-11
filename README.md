@@ -1,4 +1,4 @@
-# complate-sample-spring-mvc
+# complate-sample-spring-boot
 
  This sample repository demonstrates the server-side rendering of an
 [java spring](https://spring.io) application using the

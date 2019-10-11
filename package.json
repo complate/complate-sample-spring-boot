@@ -1,5 +1,5 @@
 {
-  "name": "complate-sample-spring-mvc",
+  "name": "complate-sample-spring-boot",
   "private": true,
   "scripts": {
     "compile": "faucet"
