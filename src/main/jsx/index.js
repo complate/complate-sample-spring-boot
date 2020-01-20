@@ -9,6 +9,6 @@ let renderer = new Renderer("<!DOCTYPE html>");
     renderer.registerView(view);
 });
 
-export default function render(stream, tag, params) {
-    renderer.renderView(tag, params, stream);
+export default function render(view, params, stream) {
+    renderer.renderView(view, params, stream);
 }

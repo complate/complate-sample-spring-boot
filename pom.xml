@@ -20,9 +20,9 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.github.complate</groupId>
+      <groupId>org.complate</groupId>
       <artifactId>complate-spring-mvc</artifactId>
-      <version>0.5.0</version>
+      <version>0.6.0</version>
     </dependency>
 
     <dependency>

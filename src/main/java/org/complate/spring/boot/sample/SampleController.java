@@ -15,7 +15,7 @@ public class SampleController {
     }
 
     @GetMapping("/bootstrap")
-    public ModelAndView bootstrap() throws Exception {
+    public ModelAndView bootstrap() {
         return new ModelAndView("BootstrapSample")
             .addObject("text", "Lorem Ipsum")
             .addObject("title", "Bootstrap Sample");

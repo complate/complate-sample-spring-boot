@@ -2,7 +2,7 @@
 
  This sample repository demonstrates the server-side rendering of an
 [java spring](https://spring.io) application using the
-[corresponding adaptor](https://github.com/complate/complate-spring-mvc).
+[corresponding adaptor](https://github.com/complate/complate-spring).
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ the controller that renders the views in response to HTTP requests.
 ### The Spring Controller
 
 The Spring controller resolves JSX views from a bundeled javascript file under
-the default path `templates/complate/bundle.js`.
+the path `templates/complate/bundle.js`.
 
 The request handler returns the view and model at once as a `ModelAndView`
 object.
@@ -40,7 +40,7 @@ public ModelAndView index() {
 The Spring framework takes care of rendering the JSX views using the
 [configured](src/main/java/org/complate/spring/boot/sample/ComplateConfiguration.java)
 `ComplateViewResolver`, imported from the
-[spring complate adaptor](https://github.com/complate/complate-spring-mvc).
+[spring complate adaptor](https://github.com/complate/complate-spring).
 
 This sample project specifies two mapping functions with their corresponding
 views, a "person view" corresponding to `/` and a "bootstrap view"
@@ -62,8 +62,8 @@ which is the name of the view to render (the `viewName` argument) in the
 `model` argument in the `Modelandview` constructor.
 
 ```javascript
-export default function render(stream, tag, params) {
-    renderer.renderView(tag, params, stream);
+export default function render(view, params, stream) {
+    renderer.renderView(view, params, stream);
 }
 ```
 
