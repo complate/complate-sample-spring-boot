@@ -6,7 +6,7 @@ import BootstrapSample from "./bootstrap-sample";
 let renderer = new Renderer("<!DOCTYPE html>");
 
 [Person, BootstrapSample].forEach(view => {
-	renderer.registerView(view);
+    renderer.registerView(view);
 });
 
 export default function render(stream, tag, params) {
