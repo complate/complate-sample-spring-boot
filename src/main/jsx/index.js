@@ -10,6 +10,5 @@ let renderer = new Renderer("<!DOCTYPE html>");
 });
 
 export default function render(stream, tag, params) {
-    renderer.renderView(tag, params, stream, true, null);
-    stream.flush();
+    renderer.renderView(tag, params, stream);
 }

@@ -8,7 +8,6 @@
 
 ```shell script
 npm install                                # Install js dependencies
-./mvnw clean package                       # Build java application
 ./mvnw spring-boot:run                     # Start server
 ```
 
@@ -26,8 +25,8 @@ the controller that renders the views in response to HTTP requests.
 The Spring controller resolves JSX views from a bundeled javascript file under
 the default path `templates/complate/bundle.js`.
 
-The request handler populates the model and returns both the both the view and
-the model at once as a `ModelAndView` object.
+The request handler returns the view and model at once as a `ModelAndView`
+object.
 
 ```java
 @GetMapping("/")
@@ -38,11 +37,10 @@ public ModelAndView index() {
 }
 ```
 
-The Spring framework takes care of
-rendering the JSX views using the
+The Spring framework takes care of rendering the JSX views using the
 [configured](src/main/java/org/complate/spring/boot/sample/ComplateConfiguration.java)
-`ComplateViewResolver`,
-imported from the [java spring-mvc complate adaptor](https://github.com/complate/complate-spring-mvc).
+`ComplateViewResolver`, imported from the
+[spring complate adaptor](https://github.com/complate/complate-spring-mvc).
 
 This sample project specifies two mapping functions with their corresponding
 views, a "person view" corresponding to `/` and a "bootstrap view"
@@ -65,8 +63,7 @@ which is the name of the view to render (the `viewName` argument) in the
 
 ```javascript
 export default function render(stream, tag, params) {
-    renderer.renderView(tag, params, stream, true, null);
-    stream.flush();
+    renderer.renderView(tag, params, stream);
 }
 ```
 
@@ -83,6 +80,6 @@ import BootstrapSample from "./bootstrap-sample";
 let renderer = new Renderer("<!DOCTYPE html>");
 
 [Person, BootstrapSample].forEach(view => {
-	renderer.registerView(view);
+    renderer.registerView(view);
 });
 ```
