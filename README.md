@@ -18,7 +18,7 @@ The application should now be running on `localhost:8080`.
 
 This sample project is based on [Spring Initializr](https://start.spring.io/).
 The interesting parts is the views in `src/jsx` and the
-[SpringdemoController class](src/main/java/com/github/complate/springdemo/SpringDemoController.java),
+[SampleController class](src/main/java/org/complate/spring/boot/sample/SampleController.java),
 the controller that renders the views in response to HTTP requests.
 
 ### The Spring Controller
@@ -31,17 +31,16 @@ the model at once as a `ModelAndView` object.
 
 ```java
 @GetMapping("/")
-public ModelAndView index() throws Exception {
-    model = new HashMap<>();
-    model.put("age", "99");
-    model.put("name", "John Doe");
-    return new ModelAndView("Person", model);
+public ModelAndView index() {
+    return new ModelAndView("Person")
+            .addObject("age", 99)
+            .addObject("name", "John Doe");
 }
 ```
 
 The Spring framework takes care of
 rendering the JSX views using the
-[configured](src/main/java/com/github/complate/springdemo/SpringdemoConfiguration.java)
+[configured](src/main/java/org/complate/spring/boot/sample/ComplateConfiguration.java)
 `ComplateViewResolver`,
 imported from the [java spring-mvc complate adaptor](https://github.com/complate/complate-spring-mvc).
 
