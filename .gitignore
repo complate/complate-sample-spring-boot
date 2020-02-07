@@ -1,26 +1,9 @@
-HELP.md
+# Maven
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**
-!**/src/test/**
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# NPM
+node_modules/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IntelliJ
 *.iml
-*.ipr
-node_modules
-package-lock.json
-
-GPATH
-GRTAGS
-GTAGS
+.idea/

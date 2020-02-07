@@ -1,15 +1,12 @@
 {
-  "name": "complate-sample-spring-boot",
-  "private": true,
   "scripts": {
-    "compile": "faucet"
+    "start": "npm run compile -- --watch",
+    "compile": "faucet --compact"
   },
   "dependencies": {
-    "complate-stream": "^0.16.7"
+    "complate-stream": "^0.16.9"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "faucet-pipeline-esnext": "^2.0.8",
-    "faucet-pipeline-js": "^2.0.8"
+    "faucet-pipeline-jsx": "^2.0.10"
   }
 }

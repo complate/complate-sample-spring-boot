@@ -7,9 +7,10 @@ module.exports = {
     js: [{
         source: templateDir + "/index.js",
         target: "./target/classes/templates/complate/bundle.js",
-        jsx: { pragma: "createElement" },
-        esnext: true,
-        format: "iife",
-        exports: "render"
+        exports: "render",
+        esnext: {
+            exclude: ["classnames"]
+        },
+        jsx: { pragma: "createElement" }
     }]
 };
