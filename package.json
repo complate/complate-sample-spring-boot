@@ -2,17 +2,12 @@
   "private": true,
   "scripts": {
     "compile": "faucet --compact",
-    "start": "npm run compile -- --watch",
-    "preinstall": "npx ensure-node-env"
+    "start": "npm run compile -- --watch"
   },
   "dependencies": {
     "complate-stream": "^0.16.9"
   },
   "devDependencies": {
     "faucet-pipeline-jsx": "^2.1.6"
-  },
-  "engines": {
-    "node": "^12.18.2",
-    "npm": "^6.14.5"
   }
 }
