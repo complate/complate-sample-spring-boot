@@ -1,12 +1,13 @@
 {
+  "private": true,
   "scripts": {
-    "start": "npm run compile -- --watch",
-    "compile": "faucet --compact"
+    "compile": "faucet --compact",
+    "start": "npm run compile -- --watch"
   },
   "dependencies": {
     "complate-stream": "^0.16.9"
   },
   "devDependencies": {
-    "faucet-pipeline-jsx": "^2.0.10"
+    "faucet-pipeline-jsx": "^2.1.6"
   }
 }

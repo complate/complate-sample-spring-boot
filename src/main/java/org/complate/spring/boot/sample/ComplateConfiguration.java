@@ -2,6 +2,8 @@ package org.complate.spring.boot.sample;
 
 import org.complate.core.ComplateRenderer;
 import org.complate.core.ComplateSource;
+import org.complate.core.renderer.ComplateThreadLocalRenderer;
+import org.complate.graal.GraalComplateRenderer;
 import org.complate.nashorn.NashornComplateRenderer;
 import org.complate.spring.mvc.ComplateViewResolver;
 import org.complate.spring.source.ResourceComplateSource;
@@ -38,22 +40,22 @@ public class ComplateConfiguration {
     @Bean
     public ComplateRenderer complateRenderer(ComplateSource source) {
         /*
-         * Note that it's possible to add global bindings that can be accessed
-         * from your JSX views by providing a `Map<String, Object>` as second
-         * argument to `NashornComplateRenderer`.
+         * Note that it's possible to add global bindings or customize other
+         * options via the builder for the GraalComplateRenderer.
          *
-         * Because `NashornComplateRenderer` only evaluates the given `ComplateSource`
+         * Because `GraalComplateRenderer` only evaluates the given `ComplateSource`
          * on instantiation changes made to this source afterwards will not be
          * picked up. If you want to re-evaluate the `ComplateSource` on every call
-         * to `render` you can wrap the `NashornComplateRenderer` within an
+         * to `render` you can wrap the `GraalComplateRenderer` within an
          * `ComplateReEvaluatingRenderer`.
          *
-         * If you encounter problems that may be related with the multi threaded
-         * nature of a Spring web application you can wrap the `NashornComplateRenderer`
-         * (or `ComplateReEvaluatingRenderer`) within an `ComplateThreadLocalRenderer`.
-         * This will create an instance that is exclusively used within a thread.
+         * Because Spring web applications are multi threaded and the
+         * `GraalComplateRenderer` relies to be executed by a single thread we
+         * wrap it into a `ComplateThreadLocalRenderer` that makes sure every
+         * thread has it's own renderer.
          */
-        return new NashornComplateRenderer(source);
+        return new ComplateThreadLocalRenderer(
+            GraalComplateRenderer.of(source)::build);
     }
 
     @Bean
