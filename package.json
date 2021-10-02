@@ -8,6 +8,6 @@
     "complate-stream": "^0.16.9"
   },
   "devDependencies": {
-    "faucet-pipeline-jsx": "^2.1.6"
+    "faucet-pipeline-jsx": "^2.1.7"
   }
 }
